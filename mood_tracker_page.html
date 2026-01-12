@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Mood Tracker</title>
+    <link href="mood_tracker_page.css" rel="stylesheet">
+   
+</head>
+<body>
+    
+
+    <div class="container">
+        <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+        <h2>How are you feeling today?</h2>
+        <form id="moodForm">
+
+            <div id="mood-selection">
+                <label>Select your mood score (1: Sad, 10: Happy):</label>
+                <div id="mood-scale">
+                    <div class="mood-level" data-mood="1">1</div>
+                    <div class="mood-level" data-mood="2">2</div>
+                    <div class="mood-level" data-mood="3">3</div>
+                    <div class="mood-level" data-mood="4">4</div>
+                    <div class="mood-level" data-mood="5">5</div>
+                    <div class="mood-level" data-mood="6">6</div>
+                    <div class="mood-level" data-mood="7">7</div>
+                    <div class="mood-level" data-mood="8">8</div>
+                    <div class="mood-level" data-mood="9">9</div>
+                    <div class="mood-level" data-mood="10">10</div>
+                </div>
+                <div id="mood-description"></div>
+            </div>
+
+            <div id="reason-selection">
+                <label>What's influencing your mood?</label>
+                <div class="reasons-grid">
+                    <div class="reason-button" data-reason="Work/Stress">💼 Work/Stress</div>
+                    <div class="reason-button" data-reason="Relationships">❤️ Relationships</div>
+                    <div class="reason-button" data-reason="Health/Pain">🏥 Health/Pain</div>
+                    <div class="reason-button" data-reason="Sleep Quality">😴 Sleep Quality</div>
+                    <div class="reason-button" data-reason="Exercise">🏋️ Exercise</div>
+                    <div class="reason-button" data-reason="Food Habits">🍽️ Food Habits</div>
+                    <div class="reason-button" data-reason="Weather">☀️ Weather</div>
+                    <div class="reason-button" data-reason="Achievement">🏆 Achievement</div>
+                </div>
+            </div>
+            
+            <p class="message" id="errorMessage"></p>
+
+            <button type="submit" id="submit-mood">Log My Mood</button>
+        </form>
+    </div>
+
+    <script src="mood_tracker_page.js"></script>
+</body>
+</html>

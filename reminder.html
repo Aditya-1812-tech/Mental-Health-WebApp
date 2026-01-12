@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timely Reminders</title>
+    <link href="reminder.css" rel="stylesheet"></link>
+    
+</head>
+<body>
+   
+    <div class="container">
+        <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+        <h2>Set a Timely Reminder</h2>
+        <form id="reminderForm">
+            
+            <div class="form-section">
+                <div class="input-group">
+                    <label for="reminderType">What is this reminder for?</label>
+                    <select id="reminderType" required>
+                        <option value="">Choose a Category...</option>
+                        <option value="medicine">💊 Taking Medicine</option>
+                        <option value="water">💧 Drinking Water</option>
+                        <option value="visit">📍 Visiting a Place</option>
+                        <option value="exercise">🏋️ Exercise/Movement</option>
+                        <option value="other">📝 Other Task</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="reminderNote">Detailed Note/Item Name</label>
+                    <input type="text" id="reminderNote" placeholder="e.g., Blood Pressure Pill, Doctor Appointment, 8 oz Water" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="input-group">
+                    <label for="reminderTime">Time of Day</label>
+                    <input type="time" id="reminderTime" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Repeat on these days:</label>
+                    <div class="recurrence-grid">
+                        <input type="checkbox" class="day-input" id="day-mon" name="days" value="M">
+                        <label for="day-mon" class="day-label">Mon</label>
+                        <input type="checkbox" class="day-input" id="day-tue" name="days" value="T">
+                        <label for="day-tue" class="day-label">Tue</label>
+                        <input type="checkbox" class="day-input" id="day-wed" name="days" value="W">
+                        <label for="day-wed" class="day-label">Wed</label>
+                        <input type="checkbox" class="day-input" id="day-thu" name="days" value="Th">
+                        <label for="day-thu" class="day-label">Thu</label>
+                        <input type="checkbox" class="day-input" id="day-fri" name="days" value="F">
+                        <label for="day-fri" class="day-label">Fri</label>
+                        <input type="checkbox" class="day-input" id="day-sat" name="days" value="Sa">
+                        <label for="day-sat" class="day-label">Sat</label>
+                        <input type="checkbox" class="day-input" id="day-sun" name="days" value="Su">
+                        <label for="day-sun" class="day-label">Sun</label>
+                    </div>
+                </div>
+            </div>
+
+            <p class="reminder-message" id="formMessage"></p>
+            <button type="submit" id="saveReminder">Save Reminder</button>
+        </form>
+    </div>
+
+    
+    <script src="reminder.js"></script>
+</body>
+</html>

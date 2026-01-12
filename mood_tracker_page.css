@@ -1,0 +1,149 @@
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e8f5e9; /* Light green/wellness background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            color: #2e7d32; /* Dark green heading */
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 26px;
+        }
+
+        /* --- Mood Scale Section --- */
+        #mood-selection {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        #mood-scale {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            cursor: pointer;
+        }
+
+        .mood-level {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: #555;
+            transition: transform 0.2s, background-color 0.2s;
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+        }
+
+        .mood-level:hover {
+            transform: scale(1.1);
+        }
+
+        /* Styles for selected mood */
+        .mood-level.selected {
+            border-color: #2e7d32;
+            color: white;
+            transform: scale(1.2);
+            /* Gradient for selection based on scale */
+            background: linear-gradient(to right, 
+                #f44336 0%,  /* 1-3 Sad/Red */
+                #ffeb3b 40%, /* 4-7 Neutral/Yellow */
+                #4caf50 80%  /* 8-10 Happy/Green */
+            );
+        }
+
+        #mood-description {
+            font-style: italic;
+            color: #777;
+            height: 20px;
+            margin-top: 10px;
+        }
+        
+        /* --- Reason Selection Section --- */
+        #reason-selection {
+            margin-bottom: 30px;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .reason-button {
+            padding: 10px 15px;
+            border: 1px solid #c8e6c9;
+            border-radius: 20px;
+            background-color: #e0f2f1; /* Light teal */
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        .reason-button.selected {
+            background-color: #4caf50; /* Green selected */
+            color: white;
+            border-color: #2e7d32;
+            font-weight: bold;
+        }
+        
+        /* --- Submit Button --- */
+        #submit-mood {
+            width: 100%;
+            padding: 12px;
+            background-color: #388e3c; /* Success green */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        #submit-mood:hover {
+            background-color: #2e7d32;
+        }
+        
+        .message {
+            text-align: center;
+            margin-top: 15px;
+            color: #e53935;
+        }
+
+        /* Back Link Styling */
+.back-link {
+    display: block;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+}
+.back-link:hover {
+    color: #0d47a1;
+}

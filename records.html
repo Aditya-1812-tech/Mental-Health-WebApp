@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Records - Wellness Tracker</title>
+    <link href="records.css" rel="stylesheet">
+</head>
+<body>
+    
+
+    <div class="container">
+        <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+        <h2>📚 Daily Records</h2>
+        <p style="text-align: center; color: #777;">Log your essential daily activities to find patterns.</p>
+        
+        <form id="dailyLogForm">
+
+            <div class="log-section">
+                <h3>😴 Sleep Cycle</h3>
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="bedTime">Time to Bed</label>
+                        <input type="time" id="bedTime" required>
+                    </div>
+                    <div class="input-item">
+                        <label for="wakeUpTime">Wake Up Time</label>
+                        <input type="time" id="wakeUpTime" required>
+                    </div>
+                </div>
+                <div class="input-item">
+                    <label for="sleepQuality">Quality Rating (1-5)</label>
+                    <select id="sleepQuality" required>
+                        <option value="">Select...</option>
+                        <option value="1">1 - Very Poor</option>
+                        <option value="2">2 - Poor</option>
+                        <option value="3">3 - Fair</option>
+                        <option value="4">4 - Good</option>
+                        <option value="5">5 - Excellent</option>
+                    </select>
+                </div>
+                <button type="button" class="add-button" onclick="logSleep()">Log Sleep</button>
+                <div class="log-message" id="sleepMessage"></div>
+            </div>
+
+            <div class="log-section">
+                <h3>💊 Medication Tracker</h3>
+                <div class="input-group">
+                    <div class="input-item" style="flex: 2;">
+                        <label for="medName">Medicine Name</label>
+                        <input type="text" id="medName" placeholder="e.g., Vitamin D, Pain Reliever">
+                    </div>
+                    <div class="input-item">
+                        <label for="medDosage">Dosage</label>
+                        <input type="text" id="medDosage" placeholder="e.g., 500mg, 1 pill">
+                    </div>
+                </div>
+                <div class="input-item">
+                    <label for="medTime">Time Taken</label>
+                    <input type="time" id="medTime">
+                </div>
+                <button type="button" class="add-button" onclick="logMedicine()">Log Medicine</button>
+                <div class="log-message" id="medMessage"></div>
+            </div>
+
+            <div class="log-section">
+                <h3>🍎 Food Habits (Placeholder)</h3>
+                <input id="text" type="text" placeholder="Enter here!">
+                <button class="add-button">Log food habbits</button>
+                <p style="color: #777;">*Food habits log could track meal times or general notes (e.g., "Ate healthy salad," "Heavy dinner").</p>
+            </div>
+            <div class="log-section">
+                <h3>💼 Work/Tasks (Placeholder)</h3>
+                <input id="text" type="text" placeholder="Enter here!">
+                <button class="add-button">Log Task</button>
+                <p style="color: #777;">*Work/Tasks log could track hours worked, major tasks completed, or perceived work stress level.</p>
+            </div>
+
+            
+        </form>
+    </div>
+
+    
+    <script src="records.js"></script>
+</body>
+</html>
